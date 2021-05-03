@@ -1,10 +1,48 @@
 <!DOCTYPE html>
+<!-- 音声素材募集中 -->
 <html>
     <head>
         <meta charset="utf-8">
         <title>夏色まつりちゃんに愚痴を聞いてもらう装置作った</title>
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="style.css">
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+        <script src="jquery.mb.YTPlayer.min.js"></script>
+        <script type="text/javascript" src="main.js"></script>
     </head>
     <body>
-        Hello, world.
+        <div id="wait">Now Loading...</div>
+        <div id="v-box">
+            <div id="vid" class="player" data-property="{
+                videoURL:'https://youtu.be/_HDBtw5-KXo',
+                containment:'body',
+                autoPlay:true,
+                mute:true,
+                startAt:0,
+                opacity:1,
+                showControls:0,
+                showYTLogo:0,
+                loop:1,
+                onReady: function() {
+                    $('#wait').fadeOut();
+                }
+            }"></div>
+        </div>
+        <div id="info">
+            <ul id="btn-list" class="btns">
+                <li class="btns">
+                    <button id="yes" class="cont btn-large">相槌ボタン</button>
+                </li>
+                <li class="btns">
+                    <button id="enc" class="cont btn-large">励ましボタン</button>
+                </li>
+                <li class="btns">
+                    <button id="desp" class="cont btn-large">罵りボタン</button>
+                </li>
+            </ul>
+        </div>
     </body>
 </html>
