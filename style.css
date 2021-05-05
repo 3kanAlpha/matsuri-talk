@@ -46,3 +46,16 @@ body {
 .btns li {
     display: inline-block;
 }
+
+#info2 {
+    position: absolute;
+    margin: 10px;
+    pad: 5px;
+    top: 0;
+    right: 0;
+}
+
+#link-github {
+    display: inline-block;
+    height: 32px;
+}
