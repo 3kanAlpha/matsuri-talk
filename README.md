@@ -1,7 +1,7 @@
 # 夏色まつりちゃんに愚痴を聞いてもらう装置作った
 **某ィンダーおじさんリスペクトのちょっとした小物です。**
 
-まつりちゃんに話を聞いてほしいときに使ってください。[こちら](https://3kanalpha.github.io/matsuri-talk/)
+まつりちゃんに話を聞いてほしいときに使ってください。[こちらからどうぞ](https://3kanalpha.github.io/matsuri-talk/)
 
 ※Windows 10、Google Chrome最新版環境のみ動作保証  
 **※PC環境のみ対応**
