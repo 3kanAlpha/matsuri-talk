@@ -14,8 +14,8 @@ function nextInt(max) {
 function playYes() {
   const l = 1;
   let audio_source = new Audio();
-  audio_source.src = "voice/y" + String(nextInt(l)) + ".mp3";
-  // audio_source.src = "voice/wassyoi.mp3";
+  audio_source.src = "assets/voice/y" + String(nextInt(l)) + ".mp3";
+  // audio_source.src = "assets/voice/wassyoi.mp3";
   audio_source.play();
 }
 
@@ -27,7 +27,7 @@ $(function() {
 function playEncourage() {
   const l = 1;
   let audio_source = new Audio();
-  audio_source.src = "voice/e" + String(nextInt(l)) + ".mp3";
+  audio_source.src = "assets/voice/e" + String(nextInt(l)) + ".mp3";
   audio_source.play();
 }
 
@@ -39,7 +39,7 @@ $(function() {
 function playDespise() {
   const l = 1;
   let audio_source = new Audio();
-  audio_source.src = "voice/d" + String(nextInt(l)) + ".mp3";
+  audio_source.src = "assets/voice/d" + String(nextInt(l)) + ".mp3";
   audio_source.play();
 }
 
