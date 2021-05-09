@@ -10,6 +10,7 @@ function nextInt(max) {
   return Math.floor(Math.random() * max);
 }
 
+// JSONロード + 再生リスト構築
 let voices;
 let listYes = [];
 let listEncourage = [];
@@ -37,9 +38,8 @@ const VOICE_PATH = "assets/voice/";
 
 // ボタンの設定
 function playYes() {
-  const L = listYes.length;
   let audioSource = new Audio();
-  audioSource.src = VOICE_PATH + listYes[nextInt() % L];
+  audioSource.src = VOICE_PATH + listYes[nextInt(listYes.length)];
   audioSource.play();
 }
 
@@ -49,9 +49,8 @@ $(function() {
 });
 
 function playEncourage() {
-  const L = listEncourage.length;
   let audioSource = new Audio();
-  audioSource.src = VOICE_PATH + listEncourage[nextInt() % L];
+  audioSource.src = VOICE_PATH + listEncourage[nextInt(listEncourage.length)];
   audioSource.play();
 }
 
@@ -61,9 +60,8 @@ $(function() {
 });
 
 function playDespise() {
-  const L = listDespise.length;
   let audioSource = new Audio();
-  audioSource.src = VOICE_PATH + listDespise[nextInt() % L];
+  audioSource.src = VOICE_PATH + listDespise[nextInt(listDespise.length)];
   audioSource.play();
 }
 
