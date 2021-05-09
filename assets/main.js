@@ -10,13 +10,35 @@ function nextInt(max) {
   return Math.floor(Math.random() * max);
 }
 
+let voices;
+let listYes = [];
+let listEncourage = [];
+let listDespise = [];
+let listMisc = [];
+
+$(function() {
+  $.getJSON("assets/voices.json", function(data) {
+    voices = data;
+
+    for (i = 0; i < voices.length; i++) {
+      const CAT = voices[i].category;
+
+      if (CAT == "yes") listYes.push(voices[i].path);
+      else if (CAT == "encourage") listEncourage.push(voices[i].path);
+      else if (CAT == "despise") listDespise.push(voices[i].path);
+      else listMisc.push(voices[i].path);
+    }
+  });
+});
+
+const VOICE_PATH = "assets/voice/";
+
 // ボタンの設定
 function playYes() {
-  const l = 1;
-  let audio_source = new Audio();
-  audio_source.src = "assets/voice/y" + String(nextInt(l)) + ".mp3";
-  // audio_source.src = "assets/voice/wassyoi.mp3";
-  audio_source.play();
+  const L = listYes.length;
+  let audioSource = new Audio();
+  audioSource.src = VOICE_PATH + listYes[nextInt() % L];
+  audioSource.play();
 }
 
 $(function() {
@@ -25,10 +47,10 @@ $(function() {
 });
 
 function playEncourage() {
-  const l = 1;
-  let audio_source = new Audio();
-  audio_source.src = "assets/voice/e" + String(nextInt(l)) + ".mp3";
-  audio_source.play();
+  const L = listEncourage.length;
+  let audioSource = new Audio();
+  audioSource.src = VOICE_PATH + listEncourage[nextInt() % L];
+  audioSource.play();
 }
 
 $(function() {
@@ -37,10 +59,10 @@ $(function() {
 });
 
 function playDespise() {
-  const l = 1;
-  let audio_source = new Audio();
-  audio_source.src = "assets/voice/d" + String(nextInt(l)) + ".mp3";
-  audio_source.play();
+  const L = listDespise.length;
+  let audioSource = new Audio();
+  audioSource.src = VOICE_PATH + listDespise[nextInt() % L];
+  audioSource.play();
 }
 
 $(function() {
