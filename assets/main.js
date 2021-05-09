@@ -28,6 +28,8 @@ $(function() {
       else if (CAT == "despise") listDespise.push(voices[i].path);
       else listMisc.push(voices[i].path);
     }
+
+    console.log(voices.length + " voices loaded successfully.");
   });
 });
 
