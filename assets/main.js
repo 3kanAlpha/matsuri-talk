@@ -65,5 +65,17 @@ $(function() {
 
   let btnDesp = document.getElementById("desp");
   btnDesp.addEventListener('click', playDespise, false);
+
+  document.addEventListener('keydown', event => {
+    if (event.code == "ArrowLeft") {
+      playYes();
+    }
+    else if  (event.code == "ArrowDown") {
+      playEncourage();
+    }
+    else if  (event.code == "ArrowRight") {
+      playDespise();
+    }
+  });
 });
 // ボタンここまで
