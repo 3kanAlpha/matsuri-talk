@@ -30,10 +30,11 @@ $(function() {
       else listMisc.push(voices[i].path);
     }
 
-    console.log(voices.length + " voices loaded successfully.");
+    console.log(voices.length + " voices loaded.");
   });
 });
 
+// ボイスを置くディレクトリ
 const VOICE_PATH = "assets/voice/";
 
 // ボタンの設定
@@ -43,21 +44,11 @@ function playYes() {
   audioSource.play();
 }
 
-$(function() {
-  let btnYes = document.getElementById("yes");
-  btnYes.addEventListener('click', playYes, false);
-});
-
 function playEncourage() {
   let audioSource = new Audio();
   audioSource.src = VOICE_PATH + listEncourage[nextInt(listEncourage.length)];
   audioSource.play();
 }
-
-$(function() {
-  let btnEnc = document.getElementById("enc");
-  btnEnc.addEventListener('click', playEncourage, false);
-});
 
 function playDespise() {
   let audioSource = new Audio();
@@ -66,6 +57,13 @@ function playDespise() {
 }
 
 $(function() {
+  let btnYes = document.getElementById("yes");
+  btnYes.addEventListener('click', playYes, false);
+
+  let btnEnc = document.getElementById("enc");
+  btnEnc.addEventListener('click', playEncourage, false);
+
   let btnDesp = document.getElementById("desp");
   btnDesp.addEventListener('click', playDespise, false);
 });
+// ボタンここまで
